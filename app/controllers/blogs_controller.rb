@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy ]
+  before_action :set_current_user, only: [:new, :edit, :show]
 
   def index
     @blogs = Blog.all

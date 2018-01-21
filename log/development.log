@@ -2430,3 +2430,1102 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 08:36:30 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 115ms (Views: 112.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180121085524)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180121085524"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shibao"], ["email", "shibao@dic.com"], ["password_digest", "shibaodayo"], ["created_at", "2018-01-21 09:07:53.323979"], ["updated_at", "2018-01-21 09:07:53.323979"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shibata"], ["email", "shibata@dic.com"], ["password_digest", "shibatadayo"], ["created_at", "2018-01-21 09:08:32.852133"], ["updated_at", "2018-01-21 09:08:32.852133"]]
+  [1m[35m (149.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], ["email", "shibao@dic.com"], ["password_digest", "shibaodayo"], ["created_at", "2018-01-21 09:12:39.136259"], ["updated_at", "2018-01-21 09:12:39.136259"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shibao"], ["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@dic.com"], ["password_digest", "shibaodayo"], ["created_at", "2018-01-21 09:13:11.977738"], ["updated_at", "2018-01-21 09:13:11.977738"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20180121092036)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180121092036"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shibao"], ["email", "shibao@dic.com"], ["password_digest", "$2a$10$sii3P7CaPGND6SqFi4q.cOy/r/RLyL1MnHyANpt1hJVL35i.184De"], ["created_at", "2018-01-21 09:32:36.830107"], ["updated_at", "2018-01-21 09:32:36.830107"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/new" for 180.47.125.129 at 2018-01-21 09:40:51 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 09:41:05 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- bcrypt:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/7f97181e7d661d8d/variables" for 180.47.125.129 at 2018-01-21 09:41:06 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 10:02:55 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- bcrypt:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/d28703d25f30105b/variables" for 180.47.125.129 at 2018-01-21 10:02:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 10:04:55 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- bcrypt:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/89bf0c3e727446d4/variables" for 180.47.125.129 at 2018-01-21 10:04:55 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 10:05:50 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 290ms (Views: 282.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 10:05:58 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- bcrypt:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/59554b86a4607255/variables" for 180.47.125.129 at 2018-01-21 10:05:59 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 10:11:50 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 1311ms (Views: 1279.2ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "basics"], ["email", "basics@dic.com"], ["password_digest", "$2a$10$4zQp5ZxYUPZzOUmAM/EEBuCa0P0X88w5nUkQJyZQHclIUXfEZ8yH2"], ["created_at", "2018-01-21 10:20:00.893062"], ["updated_at", "2018-01-21 10:20:00.893062"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-21 10:33:02 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lQYZfYWNlP79vgGtQ0VrMaICv9t/WGeCoQsbWNRukODF1Z107KKEG0rNmTQ1SEkCP/t60YW6+51lh09EZL9ZEw==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 181ms (Views: 156.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 10:43:06 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 133ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-21 10:43:40 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RP4YzwzjC208jALCJpJCPY8s47p3cdWhKYW4jQWIJj8ULZzGZcwbiIv/mltQn2AOEtUmsI2TSb7tCeyRtVnvzA==", "user"=>{"name"=>"lion", "email"=>"lion@exsample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "lion"], ["email", "lion@exsample.com"], ["password_digest", "$2a$10$y3DC9POtNZZimf9jMt3lUuFxPEgJY5N0PAsA.ZD9rKIiciA3JzWo."], ["created_at", "2018-01-21 10:43:41.044132"], ["updated_at", "2018-01-21 10:43:41.044132"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/7
+Completed 302 Found in 83ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 10:43:41 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 30.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 10:54:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 252ms (Views: 237.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 10:54:17 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 10:54:28 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound - The action 'create' could not be found for SessionsController:
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 10:54:33 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound - The action 'create' could not be found for SessionsController:
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:00:45 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKI+nrFA4QLM4TkW57gDkS3/+v1LiFVosi5Zfmt2IlsMcbqX2G/x53uSoY+RtSGisAY/97FqyXd2og1i26frqA==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 131ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:00:49 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKI+nrFA4QLM4TkW57gDkS3/+v1LiFVosi5Zfmt2IlsMcbqX2G/x53uSoY+RtSGisAY/97FqyXd2og1i26frqA==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 156ms (Views: 83.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:01:40 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:01:49 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:01:51 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:01:52 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:01:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:05 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:06 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:07 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 50ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:15 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:17 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XIrk0sqtvf6LZRjCuBTkbvuTBL/Ej93Vx7pC4sutXHFkynJAO6PmibLsj6JqN92xZ8OrEe1OIZ0C+4nv1zJg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:02:19 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:02:25 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:29 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aLCpX9SYnlVyUhq+i3am9H/tKia+B8Lo8WFZE9JbUUs4Yy1WvbeOsMUhgif9e4TH4hTvLETlXvc17Q0PYoqYuA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:02:40 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:44 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9qrhACnSzuORo9mVKsMswdlTTj+B3MseebBNEfqroTPCS+NaYhb3jk1F/8ipi6AmpyIMgTl7zO9apUo9ztndw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9qrhACnSzuORo9mVKsMswdlTTj+B3MseebBNEfqroTPCS+NaYhb3jk1F/8ipi6AmpyIMgTl7zO9apUo9ztndw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:02:51 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9qrhACnSzuORo9mVKsMswdlTTj+B3MseebBNEfqroTPCS+NaYhb3jk1F/8ipi6AmpyIMgTl7zO9apUo9ztndw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:06:41 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"sessions"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=sessions:
+  app/controllers/blogs_controller.rb:60:in `set_blog'
+
+Started POST "/__better_errors/5ef254ba72e21d0e/variables" for 180.47.125.129 at 2018-01-21 11:06:42 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/sessions/show" for 180.47.125.129 at 2018-01-21 11:06:47 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/sessions/show"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:06:55 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/" for 180.47.125.129 at 2018-01-21 11:08:37 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 11:11:12 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 184ms (Views: 181.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 11:12:49 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:13:01 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:13:12 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WsCSRm9831Np1QOkk84A1xR9TF3G9iYcm8NOeis5wwoa7itiFxth19X7ayx2pq9nTvDfScefjFj+fUsj/6kFvg==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:13:27 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-21 11:13:35 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (3.1ms)
+  Rendered blogs/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:13:37 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 11:13:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:13:53 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 11:22:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 11:23:12 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svtNzfccGV/YryhjGw4conW+tlvrXK0fne332ZMemiriKMnEnjMJum/csPptAz6R6EdzURG+MQBZYaPFI89T2Q==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/7
+Completed 200 OK in 81ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 11:23:12 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 11:23:53 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 181ms (Views: 176.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/blogs/sessions/7" for 180.47.125.129 at 2018-01-21 13:17:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9rfhtnU1aLn2ht61SiwIpwDsd5EGAVGN5VMw15hRYEGmZGW/HBp4XEH1Riw8ISqUnRWym/zjzZIh32TLKICpsg==", "id"=>"7"}
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:17:49 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:20:01 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:20:06 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:20:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:20:10 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:20:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wa/DuswHZm/k5X4X8B6D4aXSpckX58WsQDpnU0n4R8IZgXqetGDY61jLFp8VdixR/1823RaOb+glhGIKnWiBdg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:20:22 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wa/DuswHZm/k5X4X8B6D4aXSpckX58WsQDpnU0n4R8IZgXqetGDY61jLFp8VdixR/1823RaOb+glhGIKnWiBdg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:20:28 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:20:33 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLfIfZjbBffUdfPBH9Mw18zjSysrX09YzFtoiVthfd78mXFZ4Ly7c2hbm0n6u59nlm7YPyo25Ryp5W3Qj/G7ag==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 13:21:06 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 78.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:21:13 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-21 13:21:15 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.7ms)
+  Rendered blogs/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 13:21:20 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:27:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `set_current_user' for #<SessionsController:0x007fa9bc9d93c0>
+Did you mean?  set_request!:
+
+Started POST "/__better_errors/a63134fe6d587ff5/variables" for 180.47.125.129 at 2018-01-21 13:27:09 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:27:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 131.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:27:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"klQlLTaG+UfWhSU0J/oiBlsA4O7fbllR81DiACcCYjzCh6EkX6npomH2va1R9wA1xvkl5CWMxU433LYcl9Orzw==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/7
+Completed 200 OK in 82ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 13:27:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 38.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 13:31:25 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 104.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 13:31:28 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 13:31:33 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:35:20 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:35:26 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzI4wEeOWOPZVfnZtp406tgBrhS4xJVvY9Il/5TdkRKPHIHkP+nmZ2V7kVFT9ptagow9ALmtPysGbCCmQE1Xpg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 13:35:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-21 13:52:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (17.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 49.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 13:53:02 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:53:05 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:53:09 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wS3fKEcosQQHYs8sabTzPSedYhxWEQbrZ8uj7yWdih+BA2YMP08PgLtMp6SM3FyNfRDxCFd4rK8Cdaa28Q1Mqw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 13:53:11 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wS3fKEcosQQHYs8sabTzPSedYhxWEQbrZ8uj7yWdih+BA2YMP08PgLtMp6SM3FyNfRDxCFd4rK8Cdaa28Q1Mqw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (78.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 51.5ms | ActiveRecord: 78.7ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 13:53:14 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-21 13:53:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t7U1ijH5ZyzbyComHElWhpuPO8XIqZQi/TTUxRezC8GUfHjvpfbdVQTVM68P9tlMkgFFukMRmH7GFw28BHypjw==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 13:53:24 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 14:07:27 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UhOK1nEZTt1LmEVxwX3P71zznRPTsRQX4o7RbU8uQJgSPTPyCX7wWfe2LfkkFWBfBn4OB9LYvlOHMNQ0m76GLA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (75.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 38.7ms | ActiveRecord: 75.4ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 14:07:39 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-21 14:07:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XrLjeOzg0QW8dACEMQnR6if/eCJykoXxAcCc0xiOO3as4bod7w5PcnsyYsDe6iNoRGDnwJyRkv/JNsKX62aow==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 14:07:50 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 14:07:53 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HobS+S8x/CVqbAs9vRCXtR2JiLgPK9RBPIXs0YCcbBpeqGvdV1ZCodZCY7VYeDgFRwQbrA5CfgVZO+mIVAyqrg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 14:07:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-21 14:07:58 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sd/QxHDkIJFqc5x0yObYK1+W/h99mpXP4q9oT/3TA1WSFp2h5Oua6LVuhf3bWVfhVhiAYPYimZPZjLE27hyhGw==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 14:10:51 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/sessions/7" for 180.47.125.129 at 2018-01-21 14:10:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SmGWzrLozINSayIut0nxQlh/s3edDawjmfjjWj+2QuYashLH28fcZuUYurfBRNNxxYZ2fWfvMDxddLdGj2eLFQ==", "id"=>"7"}
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 14:10:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 14:11:03 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qD/FmTEvpTtKPuAemA/+eZv5CCYsCJzEjCTpwuv6MeL47EGQWAC13v1NeIfuAtxKBgDNLNbqANtIqL3eWyv4EQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 14:11:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-21 14:11:11 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-21 14:11:17 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-21 14:11:27 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G2IT11JvzXdie+a4qEhB5fyn9j5hgG+TwIETvYhiqnFbTKrzKghz895VjjBNIO5VpiplKmDpxdelPxbkXPJsxQ==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/7
+Completed 200 OK in 73ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-21 14:11:28 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+

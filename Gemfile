@@ -55,3 +55,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'bcrypt', '3.1.11' is lead to "LoadError - cannot load such file -- bcrypt:"
+# https://qiita.com/KTakata/items/2e67f7fd73cd4844909e
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'

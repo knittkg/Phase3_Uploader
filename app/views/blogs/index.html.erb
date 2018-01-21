@@ -1,3 +1,6 @@
+<div class="container">
+    <nav class="article">
+
 <h1>ブログ一覧</h1>
 
 <p><%= notice %></p>
@@ -12,9 +15,9 @@
   <tr>
     <td><%= blog.title %></td>
     <td><%= blog.content %></td>
-    <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
-    <td><%= link_to "ブログを編集する", edit_blog_path(blog.id) %></td>
-    <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <td><%= link_to '　詳細　', blog_path(blog.id) %></td>
+    <td><%= link_to '　編集　', edit_blog_path(blog.id) %></td>
+    <td><%= link_to '　削除　', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
 
   </tr>
 <% end %>
@@ -24,3 +27,20 @@
 
 <%= link_to 'ブログ新規作成画面へ', new_blog_path %>
 
+            <article>
+                <ul class="row">
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_01.jpg' ,:size => "200x200" %></li>
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_02.jpg' ,:size => "200x200" %></li>
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_03.jpg' ,:size => "200x200" %></li>
+                </ul>
+            </article>
+            <article>
+                <ul class="row">
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_04.jpg' ,:size => "200x200" %></li>
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_05.jpg' ,:size => "200x200" %></li>
+                  <li class="col-sm-6 col-md-4"><%= image_tag '300x300_06.jpg' ,:size => "200x200" %></li>
+                </ul>
+            </article>
+
+    </nav>
+</div>

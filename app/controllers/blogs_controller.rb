@@ -60,4 +60,12 @@ class BlogsController < ApplicationController
   def set_blog
     @blog = Blog.find(params[:id])
   end
+
+  def set_current_user
+    unless logged_in?
+    flash[:warning] = 'ログインして下さい'
+    redirect_to new_session_path
+    end
+  end
+
 end

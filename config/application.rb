@@ -18,5 +18,8 @@ module Sample
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # glyphiconsが使っている*.eot *.svg *.ttf *.woffらを precompile の対象に含める
+    config.assets.precompile += %w(*.eot *.svg *.ttf *.woff)
   end
 end

@@ -5489,3 +5489,43 @@ puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 09:32:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+
+Sprockets::ArgumentError - require_tree argument must be a relative path:
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2935376324501289809_70107263487600'
+
+Started POST "/__better_errors/1be809f42d82fd2f/variables" for 180.47.125.129 at 2018-01-27 09:32:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 09:32:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+
+Sprockets::ArgumentError - require_tree argument must be a relative path:
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2935376324501289809_70107272768220'
+
+Started POST "/__better_errors/533ed1c3b89d534d/variables" for 180.47.125.129 at 2018-01-27 09:32:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 09:33:25 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 1.0ms)
+
+

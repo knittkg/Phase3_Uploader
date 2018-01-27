@@ -4550,3 +4550,52 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 135ms (Views: 133.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 02:29:21 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 132.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-27 02:30:01 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 02:34:46 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 202ms (Views: 199.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 02:40:53 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-27 02:40:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 101.2ms | ActiveRecord: 0.9ms)
+
+

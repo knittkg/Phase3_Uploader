@@ -9163,3 +9163,700 @@ Completed 200 OK in 106ms (Views: 42.1ms | ActiveRecord: 61.2ms)
 
 
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 08:53:07 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/621c38b74a0a169b/variables" for 180.47.125.129 at 2018-01-30 08:53:09 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 08:53:13 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/7c7c86f076be7934/variables" for 180.47.125.129 at 2018-01-30 08:53:13 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserRefToBlogs (20180128034958)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mALTER TABLE "blogs" ADD "user_id" bigint[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_user_id" ON "blogs"  ("user_id")[0m
+  [1m[35m (24.0ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_40ebb3948d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180128034958"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFavorites (20180128050430)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.9ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "blog_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180128050430"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 08:56:44 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (29.3ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 5.1ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/blogs/index.html.erb:19:in `block in _app_views_blogs_index_html_erb___3147572335937690258_70186179686860'
+  app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___3147572335937690258_70186179686860'
+
+Started POST "/__better_errors/5d8bbf663f8823dc/variables" for 180.47.125.129 at 2018-01-30 08:56:45 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 08:56:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/blogs/index.html.erb:19:in `block in _app_views_blogs_index_html_erb___3147572335937690258_70186178226380'
+  app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___3147572335937690258_70186178226380'
+
+Started POST "/__better_errors/9b8b4cd5aa789959/variables" for 180.47.125.129 at 2018-01-30 08:56:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started POST "/__better_errors/9b8b4cd5aa789959/variables" for 180.47.125.129 at 2018-01-30 09:00:01 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:02:39 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:02:39 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 410ms (Views: 406.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:02:44 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/blogs/index.html.erb:19:in `block in _app_views_blogs_index_html_erb___3147572335937690258_70186224124180'
+  app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___3147572335937690258_70186224124180'
+
+Started POST "/__better_errors/e2f2b386b9ecc762/variables" for 180.47.125.129 at 2018-01-30 09:02:45 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:02:49 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:02:55 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:02:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 44.4ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:02:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:02:58 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-30 09:03:03 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 83.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:03:05 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:03:07 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/blogs/index.html.erb:19:in `block in _app_views_blogs_index_html_erb___3147572335937690258_70186224521860'
+  app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___3147572335937690258_70186224521860'
+
+Started POST "/__better_errors/47d622ba86a8cf12/variables" for 180.47.125.129 at 2018-01-30 09:03:07 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:21:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:21:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-30 09:21:47 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-30 09:22:11 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PR3LrCISWJvubV4Xs9wMZ4qNI1aNTQFj569wgUf9ahhbwsunTZyg7KcDnP7pDVcBio7Od4SeRaSflxwxwkuFtQ==", "user"=>{"name"=>"lion", "email"=>"lion@exsample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "lion"], ["email", "lion@exsample.com"], ["password_digest", "$2a$10$NAtETBzFaKiuhnPxW5R6sueBwaI69SZRM7T6TjiZqgzWBoq0kYN7."], ["created_at", "2018-01-30 09:22:11.416638"], ["updated_at", "2018-01-30 09:22:11.416638"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 6.8ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(lion@exsample.com) already exists.
+:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/1cf01c6692b4a331/variables" for 180.47.125.129 at 2018-01-30 09:22:12 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:22:34 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-30 09:22:45 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AWamYAqrwPlEc+3xihY6Pj5mj2vcRTyVgH7LoHjDQlDlTapOq85LarrUgReKhfFZ2d3sLlavkolM+9BMXcYyig==", "session"=>{"email"=>"lion@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lion@exsample.com"], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/7
+Completed 200 OK in 80ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-30 09:22:46 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 39.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:22:51 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.6ms)
+  Rendered blogs/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/confirm" for 180.47.125.129 at 2018-01-30 09:23:14 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApTrkYcrlzs74YNnWNgheL/UjAOnSRK7gQIXpNAOYztuDP42+I8M7IKR6nSiKXBUCHRr6XNrWKKmb+tQIj7AFA==", "blog"=>{"title"=>"lion", "content"=>"ライオンです"}, "commit"=>"送信"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs" for 180.47.125.129 at 2018-01-30 09:23:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8PAiqOb0tjudB3h+6yUdesJBXckVfqqqDmHs2BUWA2gwC3oXCOr8o/5Rn0p7viRdHYqveWWNBZ3jTUSWaCc6A==", "blog"=>{"title"=>"lion", "content"=>"ライオンです"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "lion"], ["content", "ライオンです"], ["user_id", 7]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:23:17 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/blogs/index.html.erb:19:in `block in _app_views_blogs_index_html_erb___3147572335937690258_70186141183460'
+  app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___3147572335937690258_70186141183460'
+
+Started POST "/__better_errors/a1a48302117b30f2/variables" for 180.47.125.129 at 2018-01-30 09:23:18 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "blogs" SET "user_id" = $1 WHERE "blogs"."id" = $2[0m  [["user_id", 7], ["id", 1]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "blogs" SET "user_id" = $1 WHERE "blogs"."id" = $2[0m  [["user_id", 7], ["id", 2]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:44:56 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered blogs/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 85ms (Views: 82.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs/users/7" for 180.47.125.129 at 2018-01-30 09:45:04 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-30 09:45:14 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/users" for 180.47.125.129 at 2018-01-30 09:45:37 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cN7rxPYPT7Y1u7LkLwDVaZVqxER/KcLtjytU2JI30dwWAevPmYG3wXzVcA110Y4PlWkpZXb6hir3EzhoF4E+cQ==", "user"=>{"name"=>"elephant", "email"=>"elephant@exsample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "elephant"], ["email", "elephant@exsample.com"], ["password_digest", "$2a$10$WngJ0Us8pCDTY/W9Rza6QOZZKroPou37Jc7qwgeTUTvbElf64I12G"], ["created_at", "2018-01-30 09:45:37.676392"], ["updated_at", "2018-01-30 09:45:37.676392"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 4.2ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(elephant@exsample.com) already exists.
+:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/fbea33065594700a/variables" for 180.47.125.129 at 2018-01-30 09:45:38 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/blogs/users" for 180.47.125.129 at 2018-01-30 09:46:17 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"users"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=users:
+  app/controllers/blogs_controller.rb:63:in `set_blog'
+
+Started POST "/__better_errors/cc0835cb9cdd457f/variables" for 180.47.125.129 at 2018-01-30 09:46:18 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/blogs/users/new" for 180.47.125.129 at 2018-01-30 09:46:23 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:46:26 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/blogs/sessions/7" for 180.47.125.129 at 2018-01-30 09:46:30 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xQjEhruqPnSRf7w/KdiM0a6/rSBix9kCSEQLoHCP0BP+CynkRBJHXvDy56P7muA1McCC6qMEF76X8LkBSXsU9g==", "id"=>"7"}
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:46:30 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:46:31 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-30 09:46:42 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6xvZTy4WLJ1WwuJZT7z23LYppuzlRuenTXH9rM3CDVIPMNVhj3OnDqhljr9PLz27UZLFqW+sSbuB9OZA6Md9iA==", "session"=>{"email"=>"elephant@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "elephant@exsample.com"], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/users/8
+Completed 200 OK in 73ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/users/8" for 180.47.125.129 at 2018-01-30 09:46:43 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs/users/8" for 180.47.125.129 at 2018-01-30 09:46:48 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (117.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 154ms (Views: 33.5ms | ActiveRecord: 117.8ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:46:52 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered blogs/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 202ms (Views: 199.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/3" for 180.47.125.129 at 2018-01-30 09:46:54 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Blog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."blog_id" = $2 LIMIT $3[0m  [["user_id", 8], ["blog_id", 3], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered blogs/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/blogs/favorites?blog_id=3" for 180.47.125.129 at 2018-01-30 09:46:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"ccRzDtp+QfVyO07kEKlVADiocJ+JyqvKrxnx/KD2xPNKx55sJcY43xO2FXjC6znkp9dfVUgJZXZwrUNdmQIAFg==", "blog_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "blog_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["blog_id", 3], ["created_at", "2018-01-30 09:46:57.451636"], ["updated_at", "2018-01-30 09:46:57.451636"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs
+Completed 302 Found in 81ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:46:57 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered blogs/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/users/8" for 180.47.125.129 at 2018-01-30 09:47:04 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 8]]
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs/3" for 180.47.125.129 at 2018-01-30 09:47:07 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Blog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."blog_id" = $2 LIMIT $3[0m  [["user_id", 8], ["blog_id", 3], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered blogs/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 88ms (Views: 81.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:47:16 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.6ms)
+  Rendered blogs/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs/confirm" for 180.47.125.129 at 2018-01-30 09:47:24 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZQNPO3bzgB7KuEYBgcAB0LtY/cpXjkaTDxzyoIZiyYEJm1qcCVcbyXPILxJ7MVD8DPgaIIOsDIoocQ5UdFJqrg==", "blog"=>{"title"=>"elephant1", "content"=>"象です１"}, "commit"=>"送信"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 158.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs" for 180.47.125.129 at 2018-01-30 09:47:26 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HTuWNK2iZlASxPJkg/eVQE4KU2C9VHM00cHCl/0o/9smOHtWUhofenNJqfhRtfmk0XV8qnyXvYgOdXA2xNw7Pg==", "blog"=>{"title"=>"elephant1", "content"=>"象です１"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "elephant1"], ["content", "象です１"], ["user_id", 8]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs
+Completed 302 Found in 9ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:47:26 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered blogs/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/blogs/sessions/8" for 180.47.125.129 at 2018-01-30 09:47:31 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bx1Ap1uM6q81FQJpB3Ej86UBfXedeq5Y9UlOEdxAenZUHq3FpDSThVSYWfXVM08XOn5SvVy5YOQq/fyw5bS+kw==", "id"=>"8"}
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:47:31 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-30 09:47:40 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EH17g00N0YHNaJAN44GbcrCCgX66gLx4zJqnrIl6rHArfpbhsrWoq6zly5Exw/eWL/2utHtDcsQTLhUNsI5olQ==", "session"=>{"email"=>"cat@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@exsample.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-30 09:47:45 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EH17g00N0YHNaJAN44GbcrCCgX66gLx4zJqnrIl6rHArfpbhsrWoq6zly5Exw/eWL/2utHtDcsQTLhUNsI5olQ==", "session"=>{"email"=>"cat@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@exsample.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 166ms (Views: 162.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:48:08 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blogs/sessions" for 180.47.125.129 at 2018-01-30 09:48:19 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6X6cDz//7SSNeM+3AOeJ3wTyqXpMW3+ntAFUS0w5mDwNVZAhnppmt3Pfo1EAdEK440nKP8ax0bt4hE+naTzo5g==", "session"=>{"email"=>"cat@exsample.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@exsample.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 180.47.125.129 at 2018-01-30 09:48:29 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://heroku-test-app-knittkg.c9users.io/blogs/sessions/new
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/sessions/new" for 180.47.125.129 at 2018-01-30 09:48:29 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 180.47.125.129 at 2018-01-30 09:48:32 +0000
+Cannot render console from 180.47.125.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered blogs/index.html.erb within layouts/application (40.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 1.4ms)
+
+

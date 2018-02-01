@@ -18,6 +18,8 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
     if @blog.save
+    # 投稿完了メールを送信
+      BlogMailer.blog_mail(@blog).deliver
     # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
       redirect_to blogs_path, notice: "ブログを作成しました！"
     else

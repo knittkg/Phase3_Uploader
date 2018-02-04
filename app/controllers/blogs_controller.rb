@@ -17,6 +17,12 @@ class BlogsController < ApplicationController
   def create 
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
+    # 画像保存（create）の際に、キャッシュから画像を復元してから保存する
+    @blog.image.retrieve_from_cache! params[:cache][:image] if params[:cache][:image].present?
+    # @picture.image.retrieve_from_cache! params[:cache][:image]
+    # @picture.save!
+    @blog.image.cache!
+    @blog.save!
     if @blog.save
     # 投稿完了メールを送信
       BlogMailer.blog_mail(@blog).deliver
@@ -58,7 +64,7 @@ class BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:title, :content, :image )
   end
 
   def set_blog

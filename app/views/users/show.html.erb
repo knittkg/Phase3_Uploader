@@ -1,5 +1,6 @@
+<div class="container">
 <h1><%= @user.name %>のページ</h1>
-
+<p><%= image_tag @user.image %></p>
 <p>メールアドレス: <%= @user.email %></p>
 
 <p>お気に入りBLOG一覧</p>
@@ -20,3 +21,4 @@
   </tr>
 <% end %>
 </table>
+</div>

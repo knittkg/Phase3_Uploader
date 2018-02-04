@@ -60,3 +60,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'bcrypt', '3.1.11' is lead to "LoadError - cannot load such file -- bcrypt:"
 # https://qiita.com/KTakata/items/2e67f7fd73cd4844909e
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+
+# Generate Test Data
+gem 'faker'
+
+# Read this https://devcenter.heroku.com/articles/getting-started-with-rails4#heroku-gems
+gem 'rails_12factor', group: :production
+
+# https://github.com/carrierwaveuploader/carrierwave#installation
+gem 'carrierwave', '~> 1.0'
+# 
+gem "mini_magick"

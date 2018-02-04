@@ -21,7 +21,7 @@ class BlogsController < ApplicationController
     @blog.image.retrieve_from_cache! params[:cache][:image] if params[:cache][:image].present?
     # @picture.image.retrieve_from_cache! params[:cache][:image]
     # @picture.save!
-    @blog.image.cache!
+    # @blog.image.cache! 画像なしの投稿の際にエラーになったので外して様子見。動作したのでコメントアウト。
     @blog.save!
     if @blog.save
     # 投稿完了メールを送信

@@ -6,7 +6,7 @@
   <%= form.hidden_field :content %>
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
-  <%= image_tag(@blog.image.url)  unless @blog.image.blank? %>
+  <%= image_tag(@blog.image.url , :size => "300x200") unless @blog.image.blank? %>
   <%= hidden_field_tag :"cache[image]",@blog.image.cache_name %>
   <p><%= form.submit  "登録する" %></p>
 <% end %>

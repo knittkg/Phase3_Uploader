@@ -33,9 +33,11 @@ li {
   width: 100%;
 }
 
+/*
 .container {
   height: 600px;
 }
+*/
 
 footer {
   background-color: #d2d2d2;
@@ -44,7 +46,7 @@ footer {
   padding: 20px 0 10px 0;
   margin: auto;
   font-size: 12px;
-  position: fixed;   
+  position: relative;   
   bottom: 0;
   text-align: center;
 }

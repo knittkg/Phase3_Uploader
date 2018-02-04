@@ -3,7 +3,7 @@
 <p>タイトル: <%= @blog.title %></p>
 <p>内容: <%= @blog.content %></p>
 <p>投稿者: <%= @blog.user.name %></p>
-<p><%= image_tag @blog.image %></p>
+<p><%= image_tag @blog.image ,:size => "300x200" %></p>
 
 <% unless @blog.user == current_user %>
   <% if @favorite.present? %>
